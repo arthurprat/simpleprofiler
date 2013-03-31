@@ -1,0 +1,26 @@
+<script src="/static/js/sorttable.js"></script>
+<table class="sortable">
+    <tr style="text-align:left">
+        <th>Inline Time</th>
+        <th>Total Time</th>
+        <th>Avg Time</th>
+        <th>Call count</th>
+        <th>Rec call count</th>
+        <th>Name</th>
+        <th>Line</th>
+        <th>File name</th>
+    </tr>
+    {% for x in results %}
+    <tr>
+        <td>{{ x.inlinetime|floatformat:5 }}</td>
+        <td>{{ x.totaltime|floatformat:5 }}</td>
+        <td>{{ x.avgtime|floatformat:5 }}</td>
+        <td>{{ x.callcount }}</td>
+        <td>{{ x.reccallcount }}</td>
+        <td>{{ x.name }}</td>
+        <td>{{ x.line }}</td>
+        <td>{{ x.filename }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
